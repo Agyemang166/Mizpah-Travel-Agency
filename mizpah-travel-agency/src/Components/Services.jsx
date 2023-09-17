@@ -60,11 +60,12 @@ export default function Services() {
     }
   };
   return (
-    <section className='justify-content-center  align-items-center  d-flex bg-dark' >
+    <section className='justify-content-center  align-items-center  d-flex' style={{backgroundColor:"yellow"}}>
       <Container id='services'>
         <div className='service-header'>
-          <h1 className='service-title'>Services</h1>
+          <h1 className='service-title  text-uppercase'>Services</h1>
           <p className='service-paragraph'> Discover new horizons with us! We're more than a travel agency, we're your passport to unforgettable adventures. We tailor each journey to your needs, arranging all details from flights to unique experiences. We're committed to making your travels the highlight of your year. Get ready to create memories that'll last a lifetime!</p>
+          <h6>Open on Larger devices for more info</h6>
             <Carousel responsive={responsive} infinite={true} className="skills-slider">
               {
               servicesData.map(service => {

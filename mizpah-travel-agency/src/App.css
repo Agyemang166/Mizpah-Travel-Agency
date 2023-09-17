@@ -13,7 +13,6 @@
   body {
     overflow-x: hidden;
     position: relative;
-    background-color: #121212 !important;
     font-weight: 400;
     color: white !important;
     font-family: sans-serif !important;
@@ -204,6 +203,10 @@
   .nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
     border-color: transparent;
   }
+
+
+
+
   /* navbar css */
 
   .banner {
@@ -308,15 +311,36 @@
     border-right: 0.88em solid #666;
   }
   /* banner css */
+
+
+
+  /* About starts */
+  #about{
+    height: 60vh;
+    color: black;
+    background-color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+
+  .about-text {
+    color: white;
+    text-align: justify;
+  }
+  /* About ends */
   
+
+
   /* services starts */
   #services{
-    background-color: rgb(37, 34, 34);
+    background-color: rgb(36, 37, 34);
     border-radius: 20px;
-    margin-top: -20px;
+    margin-top: -10px;
     height: auto;
     text-align: center;
     padding-bottom: 6%;
+    margin-bottom: 20px;
   }
 
   .service-title{
@@ -329,7 +353,9 @@
     align-items: center;
     font-style: italic;
   }
-
+  .service-header h6{
+    display: none;
+  }
   .card{
     align-items: center;
     text-align: center;
@@ -389,7 +415,8 @@
     right: 0;
   }
 
-  .title-holder h2{
+  .title-holder h2,
+  #about .title-holder h2{
     font-size: 50px;
     font-weight: 600;
   }
@@ -480,12 +507,14 @@
 /* Recommend start */
 .works-block{
   padding-bottom: 30px;
-  height: auto;
+  height: 100%;
+  background-color: black;
 }
 .works-block .portfoliolist>div {
   padding: 15px;
   overflow: hidden;
 }
+
 
 .works-block .portfoliolist>div img {
   position: relative;
@@ -496,30 +525,36 @@
 
 .works-block .portfoliolist>div .label {
   position: absolute;
-  height: 60px;
+  height: 0;
   bottom: -60px;
   left: 0;
   right: 0;
   -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  background: rgba(0, 0, 0, 0.8);
+  transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  background: rgba(0, 0, 0, 0.4);
   padding: 10px;
   color: #fff;
 }
 
 .works-block .portfoliolist>div h3 {
   margin: 0 0 5px;
-  color: #f64b4b;
-  font-size: 16px;
+  color: yellow;
+  text-shadow: 1px 1px 1px red;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .works-block .portfoliolist>div p {
   margin: 0;
-  font-size: 12px;
+  font-size: 18px;
+  font-weight: 700;
+}
+#recommend h6{
+  display: none;
 }
 
 .works-block .portfoliolist>div:hover .label {
-  
+  height: 100%;
   bottom: 0;
 }
 
@@ -530,7 +565,7 @@
 .works-block .portfoliolist .portfolio-wrapper {
   overflow: hidden;
   position: relative !important;
-  background: #666;
+  background: yellow;
   cursor: pointer;
   height: auto;
   width: 100%;
@@ -540,10 +575,7 @@
   font-size: 100%;
 }
 
-.works-block .pagination {
-  justify-content: center;
-  margin: 25px 0 0;
-}
+
 
 
 /* Recommend end */
@@ -552,6 +584,7 @@
 /* contact start */
 .contact-block {
   position: relative;
+  background-color: rgb(23, 23, 173);
 }
 
 .contact-block .row {
@@ -572,8 +605,13 @@
   height: 450px;
 }
 
+.form-control {
+  margin: 10px;
+  padding: 10px;
+}
+
 .contact-block .contact-info {
-  padding: 70px 40px 0;
+  padding: 0px 40px 30px;
   position: relative;
   z-index: 1;
   font-size: 18px;
@@ -600,3 +638,57 @@
 
 /* contact end */
   
+.contact-block .contact-info {
+  padding: 0px 40px 30px;
+  position: relative;
+  z-index: 1;
+  font-size: 18px;
+  border-radius: 5px;
+
+  
+}
+@media (max-width: 480px) {
+    .contact-block .contact-info li {
+      display: block;
+      width: 100%;
+    }
+
+    .title-holder h2,
+    .service-header h1 {
+      font-size: 20px;
+    }
+  #services{
+    margin-top: none;
+  }
+  p,
+  .service-paragraph {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  .wrap span{
+   display: none;
+  }
+  .banner h5{
+    display: none;
+  }
+  .vvd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #recommend i{
+    display: none;
+  }
+  #recommend h6{
+    display: grid;
+  }
+  #services .item .card-text{
+   display: none;
+  }
+  .service-header h6{
+    display: grid;
+  }
+  }
+
+
+  /* Add more styles for other elements here */

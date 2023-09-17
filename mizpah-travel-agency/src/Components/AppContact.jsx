@@ -3,39 +3,49 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import React from 'react';
 import * as Icon from 'react-bootstrap-icons';
 
-function AppContact() {
-  return (
-    <section id="contact" className="block contact-block">
-      <Container fluid>
-        <div className="title-holder">
-          <h2>Contact us</h2>
-          <div className="subtitle">get connected with us</div>
-        </div>
-        <Form className='contact-form'>
-          <Row>
-            <Col sm={4}>
-              <Form.Control type="text" placeholder="Enter your full name" required />
-            </Col>
-            <Col sm={4}>
-              <Form.Control type="email" placeholder="Enter your email address" required />
-            </Col>
-            <Col sm={4}>
-              <Form.Control type="tel" placeholder="Enter your contact number" required />
-            </Col>
-          </Row>
-          <Row>
-            <Col sm={12}>
-              <Form.Control as="textarea" placeholder="Enter your contact message" required />
-            </Col>
-          </Row>
-          <div className='btn-holder'>
-            <Button formaction="mailto:gyamfiagyemang999@gmail.com">Submit</Button>
+class AppContact extends React.Component {
+  sendEmail(event) {
+    event.preventDefault();
+    window.location.href = `mailto:gyamfiagyemang999@gmail.com?subject=Contact Form Submission&body=
+    Name: ${event.target.elements.name.value}, 
+    Email: ${event.target.elements.email.value}, 
+    Message:${event.target.elements.message.value}, 
+    Tel:${event.target.elements.telephone.value}`;
+  }
+
+  render() {
+    return (
+      <section id="contact" className="block contact-block">
+        <Container fluid>
+          <div className="title-holder text-center pt-5">
+            <h2 className='text-uppercase'>Contact us</h2>
+            <div className="subtitle pb-3">- Get Connected With Us -</div>
           </div>
-        </Form>
-      </Container>
-      <div className='google-map'>
+          <Form className='contact-form d-flex justify-content-center' onSubmit={this.sendEmail.bind(this)} >
+            <Row>
+              <Col sm={4} >
+                <Form.Control type="text" name="name" placeholder="Enter your full name" required />
+              </Col>
+              <Col sm={4} >
+                <Form.Control type="email" name="email" placeholder="Enter your email address" required />
+              </Col>
+              <Col sm={4} >
+                <Form.Control type="tel" placeholder="Enter your contact number" name="telephone" required />
+              </Col>
+              <Col sm={12} >
+                  We promise that we will not share your email address.
+                <Form.Control style={{ height:200}} as="textarea" placeholder="How may we assist you (Add Your Current Location)" name="message" required />
+              </Col>
+              <Col className="d-flex justify-content-center" sm={4}>
+                <Button type="submit">Send Email</Button>
+              </Col>
+            </Row>
+          </Form>
+        </Container>
+        <div className='google-map'>
         <iframe title="map" src="https://maps.google.com/maps?q=west chester&t=&z=10&ie=UTF8&iwloc=&output=embed"></iframe>
       </div>
       <Container fluid>
@@ -56,8 +66,9 @@ function AppContact() {
           </ul>
         </div>
       </Container>
-    </section>
-  );
+      </section>
+    );
+  }
 }
 
 export default AppContact;

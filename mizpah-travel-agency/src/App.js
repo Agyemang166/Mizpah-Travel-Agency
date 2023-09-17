@@ -8,6 +8,8 @@ import Recommend from './Components/Recommend'
 import Services from './Components/Services'
 import Testimonial from './Components/Testimonial'
 import AppContact from './Components/AppContact';
+import About from './Components/About';
+
 
 
 export default function App() {
@@ -16,6 +18,7 @@ export default function App() {
       <ScrollToTop />
       <NavBar/>
       <Hero/>
+      <About /> 
       <Services />
       <Recommend />
       <Testimonial />

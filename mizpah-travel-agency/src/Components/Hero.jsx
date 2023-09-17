@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import Aeroplane from '../assets/aeroplane.png'
 
 export default function Hero() {
+  
+
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
@@ -52,8 +54,8 @@ export default function Hero() {
             <Container>
                 <Row className="justify-contents-center align-items-justify">
                     <Col xs={12} md={6} xl={6}>
-                        <span className="tagline ">Welcome to Mizpah Travel Agency</span>
-                    
+                        <span className="tagline ">Welcome to Mizpah Travel Agency </span>
+                        
                     <h1 className="wrap"><span >{text}</span> </h1>
                     <h5>Ready to escape the ordinary? Join us on a journey of discovery. You'll immerse yourself in diverse cultures, taste exotic cuisines, and make unforgettable memories. Whether you're a seasoned globetrotter or a first-time explorer, we've got the perfect adventure waiting for you. Let's turn your travel dreams into reality. The world is your oyster, and it's time to start exploring!</h5>
                     <a href='#'><button className="vvd" > <span>Let's Connect <Icon.ArrowRightCircleFill size={28} /></span></button></a>

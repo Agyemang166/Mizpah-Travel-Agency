@@ -44,10 +44,10 @@ export default function NavBar() {
               <Nav className="me-auto">
 
                 <Nav.Link href="#home" className={activeLink === "home" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+                <Nav.Link href="#about" className={activeLink === "about" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('about')}>About Us</Nav.Link>
                 <Nav.Link href="#services" className={activeLink === "services" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('services')}>Services</Nav.Link>
                 <Nav.Link href="#recommend" className={activeLink === "recommend" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('recommend')}>Recommend</Nav.Link>
                 <Nav.Link href="#testimonials" className={activeLink === "testimonial" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('testimonial')}>Testimonial</Nav.Link>
-                <Nav.Link href="#project" className={activeLink === "about" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('about')}>About Us</Nav.Link>
                 
               </Nav>
               <span className="Navbar-text">
@@ -59,7 +59,7 @@ export default function NavBar() {
                     <a href= "tel:+1 (513) 328-2864"><Icon.Phone className='icon'/></a>
                 </div>
                 <div>
-                    <a href='https://wa.me/+1 513-328-2864'><button className="vvd" > <span>Let's Connect <Icon.ArrowRightCircleFill size={28} /></span></button></a>
+                    <a href='#contact'><button className="vvd" > <span>Contact Us <Icon.ArrowRightCircleFill size={28} /></span></button></a>
                 </div>
                 
               </span>

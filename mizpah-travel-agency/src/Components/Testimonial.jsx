@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
+import * as Icon from 'react-bootstrap-icons';
 
 var testimonialsData = [
   {
@@ -33,7 +34,7 @@ function Testimonial() {
     <section id="testimonials" className="testimonials-block">
       <Container fluid>
         <div className="title-holder">
-          <h2>Clients' Testimonials</h2>
+          <h2 className='text-uppercase'>Clients' Testimonials</h2>
             <h3><a href='https://g.co/kgs/DZdLJN'>Leave A Review</a></h3>
           <div className="subtitle">- What Clients Say About Us. We'd love to hear your thoughts too! -</div>
 
@@ -48,6 +49,14 @@ function Testimonial() {
                     <cite>
                       <span className='name'>{testimonials.name}</span>
                       <span className='designation'>{testimonials.designation}</span>
+                      <div className='star text-warning'>                       
+                      <Icon.StarFill />
+                      <Icon.StarFill />
+                      <Icon.StarFill />
+                      <Icon.StarFill />
+                      <Icon.StarFill />
+                      </div>
+
                     </cite>
                   </blockquote>             
                 </Carousel.Item>
