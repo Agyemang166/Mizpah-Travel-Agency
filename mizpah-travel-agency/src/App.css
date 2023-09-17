@@ -316,7 +316,7 @@
 
   /* About starts */
   #about{
-    height: 60vh;
+    height: auto;
     color: black;
     background-color: red;
     margin-top: 10px;
@@ -570,6 +570,9 @@
   height: auto;
   width: 100%;
 }
+#recommend .two {
+  display: none;
+}
 
 .works-block .portfoliolist .label {
   font-size: 100%;
@@ -679,6 +682,14 @@
   #recommend i{
     display: none;
   }
+  #recommend .two {
+    display: grid;
+    letter-spacing: 0px;
+    font-size: 14px;
+  }
+  #recommend .two p{
+    font-size: 14px;
+  }
   #recommend h6{
     display: grid;
   }
@@ -688,7 +699,13 @@
   .service-header h6{
     display: grid;
   }
+  .about-img{
+    display: flex;
+    justify-content: center;
   }
-
+  .portfolio-wrapper {
+    transform: scale(0.8);
+  }
+}
 
   /* Add more styles for other elements here */

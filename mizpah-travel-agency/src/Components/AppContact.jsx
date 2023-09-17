@@ -9,7 +9,7 @@ import * as Icon from 'react-bootstrap-icons';
 class AppContact extends React.Component {
   sendEmail(event) {
     event.preventDefault();
-    window.location.href = `mailto:gyamfiagyemang999@gmail.com?subject=Contact Form Submission&body=
+    window.location.href = `mailto:Kelvinkyei2004@gmail.com?subject=Contact Form Submission&body=
     Name: ${event.target.elements.name.value}, 
     Email: ${event.target.elements.email.value}, 
     Message:${event.target.elements.message.value}, 
@@ -62,6 +62,15 @@ class AppContact extends React.Component {
             <li>
             <i className="fas fa-phone"><Icon.Signpost /></i>
               West Chester,USA
+            </li>
+            <li>
+            <div className="social-icon mt-5">
+                    <a href="https://www.instagram.com/mizpahtravel/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"><Icon.Instagram className='icon'/></a>
+                    <a href="https://www.facebook.com/profile.php?id=100093048200376&mibextid=avESrC"> <Icon.Facebook className='icon'/></a>
+                    <a href="https://www.tiktok.com/@mizpah_travel2023?_t=8fiKjKM214U&_r=1"><Icon.Tiktok className='icon' /></a>
+                    <a href="https://www.youtube.com/@MizpahTravelAgency-tg6lf"><Icon.Youtube className='icon' /></a>
+                    <a href= "tel:+1 (513) 328-2864"><Icon.Phone className='icon'/></a>
+                </div>
             </li>
           </ul>
         </div>

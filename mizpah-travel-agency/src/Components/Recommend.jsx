@@ -7,6 +7,7 @@ import * as Icon from 'react-bootstrap-icons';
 const worksData = [
   {
     id: 1,
+    link: "",
     image: require('../assets/waterpark.webp'),
     alt: "waterpark",
     title: 'Splash Fun',
@@ -14,6 +15,7 @@ const worksData = [
   }, 
   {
     id: 2,
+    link: "",
     image: require('../assets/museum.avif'),
     alt: "museum",
     title: 'Museum Visiting',
@@ -21,6 +23,7 @@ const worksData = [
   }, 
   {
     id: 3,
+    link: "",
     image: require('../assets/fleamarket.webp'),
     alt: "fleamarket",
     title: 'Bargain Hunting',
@@ -28,6 +31,7 @@ const worksData = [
   }, 
   {
     id: 4,
+    link: "https://www.tiktok.com/@mizpah_travel2023/video/7279869096705920298?is_from_webapp=1&sender_device=pc&web_id=7279116968002995717",
     image: require('../assets/restaurant.webp'),
     alt: "restaurants",
     title: 'Culinary Adventure',
@@ -35,6 +39,7 @@ const worksData = [
   }, 
   {
     id: 5,
+    link: "",
     image: require('../assets/photography.webp'),
     alt: "photography",
     title: 'Photographic Excursions',
@@ -42,6 +47,7 @@ const worksData = [
   }, 
   {
     id: 6,
+    link: "",
     image: require('../assets/beaching.webp'),
     alt: "beaching",
     title: 'Sandy Soirees',
@@ -72,11 +78,15 @@ function Recommend() {
                         <h3>{works.title}</h3>
                         <p>{works.subtitle}</p>
                         <div className="social-icon pt-5">
-                          <a href="#"><Icon.Whatsapp className='icon'/></a>
-                          <a href="#"><Icon.Tiktok className='icon'/></a>
+                          <a href="https://wa.me/+15133282864"><Icon.Whatsapp className='icon'/></a>
+                          <a href={works.link}><Icon.Tiktok className='icon'/></a>
                           <a href= "tel:+1 (513) 328-2864"><Icon.Phone className='icon'/></a>
-                </div>
+                        </div>
                       </div>
+                  </div>
+                  <div className='two'>
+                    <h3>{works.title}</h3>
+                    <p>{works.subtitle}</p>
                   </div>
                 </Col>
               );
