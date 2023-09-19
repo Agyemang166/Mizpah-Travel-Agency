@@ -52,6 +52,7 @@ export default function NavBar() {
               </Nav>
               <span className="Navbar-text">
                 <div className="social-icon">
+                <a href="https://twitter.com/Mizpahagency"><Icon.Twitter className='icon' /></a>
                     <a href="https://www.instagram.com/mizpahtravel/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"><Icon.Instagram className='icon'/></a>
                     <a href="https://www.facebook.com/profile.php?id=100093048200376&mibextid=avESrC"> <Icon.Facebook className='icon'/></a>
                     <a href="https://www.tiktok.com/@mizpah_travel2023?_t=8fiKjKM214U&_r=1"><Icon.Tiktok className='icon' /></a>
